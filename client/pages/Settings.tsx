@@ -24,6 +24,8 @@ import {
   Mail,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "@/hooks/useTranslation";
+import { Language } from "@/lib/translations";
 
 export default function Settings() {
   const [fontSize, setFontSize] = useState([18]);
