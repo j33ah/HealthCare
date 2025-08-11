@@ -150,7 +150,9 @@ export default function Settings() {
               </Label>
               <Select value={language} onValueChange={setLanguage}>
                 <SelectTrigger className="text-lg h-14 mt-3">
-                  <SelectValue />
+                  <SelectValue placeholder="Select Language">
+                    {languageNames[language as keyof typeof languageNames]}
+                  </SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="english" className="text-lg">
