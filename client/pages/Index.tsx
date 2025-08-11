@@ -245,9 +245,11 @@ export default function Index() {
             <p className="text-lg text-muted-foreground mb-6">
               Customize your medication and appointment alerts
             </p>
-            <Button className="senior-button bg-healthcare-secondary hover:bg-healthcare-secondary/90 w-full">
-              Manage Reminders
-            </Button>
+            <Link to="/settings">
+              <Button className="senior-button bg-healthcare-secondary hover:bg-healthcare-secondary/90 w-full">
+                Manage Reminders
+              </Button>
+            </Link>
           </CardContent>
         </Card>
 
