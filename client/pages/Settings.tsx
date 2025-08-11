@@ -28,9 +28,9 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { Language } from "@/lib/translations";
 
 export default function Settings() {
+  const { language, setLanguage, t } = useTranslation();
   const [fontSize, setFontSize] = useState([18]);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [language, setLanguage] = useState("english");
 
   const languageNames = {
     english: "English",
