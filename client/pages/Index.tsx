@@ -238,9 +238,11 @@ export default function Index() {
             <p className="text-lg text-muted-foreground mb-6">
               Adjust text size, language, and preferences
             </p>
-            <Button className="senior-button bg-secondary hover:bg-secondary/90 w-full">
-              Open Settings
-            </Button>
+            <Link to="/settings">
+              <Button className="senior-button bg-secondary hover:bg-secondary/90 w-full">
+                Open Settings
+              </Button>
+            </Link>
           </CardContent>
         </Card>
       </div>
