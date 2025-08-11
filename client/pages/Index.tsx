@@ -3,13 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { 
-  Calendar, 
-  Clock, 
-  AlertCircle, 
-  Phone, 
-  Heart, 
-  Pill, 
+import { Link } from "react-router-dom";
+import {
+  Calendar,
+  Clock,
+  AlertCircle,
+  Phone,
+  Heart,
+  Pill,
   MapPin,
   Users,
   Bell,
