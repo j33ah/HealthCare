@@ -210,9 +210,11 @@ export default function Index() {
             <p className="text-lg text-muted-foreground mb-6">
               View health updates and manage care settings
             </p>
-            <Button className="senior-button bg-healthcare-primary hover:bg-healthcare-primary/90 w-full">
-              Access Dashboard
-            </Button>
+            <Link to="/caregiver">
+              <Button className="senior-button bg-healthcare-primary hover:bg-healthcare-primary/90 w-full">
+                Access Dashboard
+              </Button>
+            </Link>
           </CardContent>
         </Card>
 
