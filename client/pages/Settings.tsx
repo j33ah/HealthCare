@@ -66,15 +66,15 @@ export default function Settings() {
         <Link to="/">
           <Button variant="outline" size="lg" className="senior-button">
             <ArrowLeft className="h-6 w-6 mr-2" />
-            Back to Home
+            {t('backToHome')}
           </Button>
         </Link>
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-            Settings
+            {t('settings')}
           </h1>
           <p className="text-xl text-muted-foreground mt-2">
-            Customize your app experience
+            {t('customizeExperience')}
           </p>
         </div>
       </div>
