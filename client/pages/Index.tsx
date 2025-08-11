@@ -93,10 +93,10 @@ export default function Index() {
           />
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-              {t('appName')}
+              {t("appName")}
             </h1>
             <p className="text-xl text-muted-foreground mt-2">
-              {t('appTagline')}
+              {t("appTagline")}
             </p>
           </div>
         </div>
@@ -135,15 +135,15 @@ export default function Index() {
             className="emergency-button bg-healthcare-emergency hover:bg-healthcare-emergency/90 text-healthcare-emergency-foreground w-full"
           >
             <AlertCircle className="h-8 w-8 mr-4" />
-            {t('emergencySOS')}
+            {t("emergencySOS")}
             <Phone className="h-8 w-8 ml-4" />
           </Button>
           <p className="text-lg mt-4 text-muted-foreground">
-            {t('emergencyHelp')}
+            {t("emergencyHelp")}
             {location && (
               <span className="flex items-center justify-center mt-2">
                 <MapPin className="h-5 w-5 mr-2" />
-                {t('locationActive')}
+                {t("locationActive")}
               </span>
             )}
           </p>

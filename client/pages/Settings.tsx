@@ -37,7 +37,7 @@ export default function Settings() {
     spanish: "Español",
     french: "Français",
     chinese: "中文",
-    arabic: "العربية"
+    arabic: "العربية",
   };
   const [notifications, setNotifications] = useState({
     medications: true,
@@ -66,15 +66,15 @@ export default function Settings() {
         <Link to="/">
           <Button variant="outline" size="lg" className="senior-button">
             <ArrowLeft className="h-6 w-6 mr-2" />
-            {t('backToHome')}
+            {t("backToHome")}
           </Button>
         </Link>
         <div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-            {t('settings')}
+            {t("settings")}
           </h1>
           <p className="text-xl text-muted-foreground mt-2">
-            {t('customizeExperience')}
+            {t("customizeExperience")}
           </p>
         </div>
       </div>
@@ -150,7 +150,10 @@ export default function Settings() {
               <Label className="text-xl font-semibold">
                 Preferred Language
               </Label>
-              <Select value={language} onValueChange={(value) => setLanguage(value as Language)}>
+              <Select
+                value={language}
+                onValueChange={(value) => setLanguage(value as Language)}
+              >
                 <SelectTrigger className="text-lg h-14 mt-3">
                   <SelectValue placeholder="Select Language">
                     {languageNames[language as keyof typeof languageNames]}

@@ -3,10 +3,10 @@ export const translations = {
     // Header
     appName: "Senior Citizen Care",
     appTagline: "Medical Reminder & Support Companion",
-    
+
     // Navigation
     backToHome: "Back to Home",
-    
+
     // Homepage
     emergencySOS: "EMERGENCY SOS",
     emergencyHelp: "Press for immediate emergency assistance",
@@ -26,7 +26,7 @@ export const translations = {
     openSettings: "Open Settings",
     healthPriority: "Your health and safety are our priority",
     available24_7: "Available 24/7 for emergency assistance",
-    
+
     // Medications
     myMedications: "My Medications",
     manageMedications: "Manage your daily medication schedule",
@@ -38,7 +38,7 @@ export const translations = {
     medicationHistory: "Medication History",
     viewHistory: "View History",
     importantReminders: "Important Reminders",
-    
+
     // Settings
     settings: "Settings",
     customizeExperience: "Customize your app experience",
@@ -69,7 +69,7 @@ export const translations = {
     manageEmergencyContacts: "Manage Emergency Contacts",
     saveAllSettings: "Save All Settings",
     preferencesAutoSave: "Your preferences will be saved automatically",
-    
+
     // Caregiver Dashboard
     caregiverDashboardTitle: "Caregiver Dashboard",
     monitorSupport: "Monitor and support your loved ones",
@@ -83,17 +83,17 @@ export const translations = {
     recentAlerts: "Recent Alerts & Updates",
     emergencyActions: "Emergency Actions",
     callEmergencyServices: "Call Emergency Services",
-    alertAllCaregivers: "Alert All Caregivers"
+    alertAllCaregivers: "Alert All Caregivers",
   },
-  
+
   spanish: {
     // Header
     appName: "Cuidado para Personas Mayores",
     appTagline: "Recordatorio Médico y Compañero de Apoyo",
-    
+
     // Navigation
     backToHome: "Volver al Inicio",
-    
+
     // Homepage
     emergencySOS: "SOS EMERGENCIA",
     emergencyHelp: "Presiona para asistencia de emergencia inmediata",
@@ -103,7 +103,8 @@ export const translations = {
     viewAllMedications: "Ver Todos los Medicamentos",
     manageAppointments: "Gestionar Citas",
     caregiverDashboard: "Panel del Cuidador",
-    caregiverDescription: "Ver actualizaciones de salud y gestionar configuración de cuidados",
+    caregiverDescription:
+      "Ver actualizaciones de salud y gestionar configuración de cuidados",
     accessDashboard: "Acceder al Panel",
     reminderSettings: "Configuración de Recordatorios",
     reminderDescription: "Personalizar alertas de medicamentos y citas",
@@ -113,7 +114,7 @@ export const translations = {
     openSettings: "Abrir Configuración",
     healthPriority: "Tu salud y seguridad son nuestra prioridad",
     available24_7: "Disponible 24/7 para asistencia de emergencia",
-    
+
     // Settings
     settings: "Configuración",
     customizeExperience: "Personaliza tu experiencia en la app",
@@ -130,7 +131,8 @@ export const translations = {
     preferredLanguage: "Idioma Preferido",
     notificationSettings: "Configuración de Notificaciones",
     medicationReminders: "Recordatorios de Medicamentos",
-    medicationRemindersDesc: "Recibir notificaciones cuando sea hora de medicamentos",
+    medicationRemindersDesc:
+      "Recibir notificaciones cuando sea hora de medicamentos",
     appointmentReminders: "Recordatorios de Citas",
     appointmentRemindersDesc: "Recibir notificaciones sobre citas próximas",
     emergencyAlerts: "Alertas de Emergencia",
@@ -140,20 +142,21 @@ export const translations = {
     vibration: "Vibración",
     vibrationDesc: "Vibrar para alertas importantes",
     emergencyContacts: "Contactos de Emergencia",
-    emergencyContactsDesc: "Gestionar quién recibe notificaciones en caso de emergencia",
+    emergencyContactsDesc:
+      "Gestionar quién recibe notificaciones en caso de emergencia",
     manageEmergencyContacts: "Gestionar Contactos de Emergencia",
     saveAllSettings: "Guardar Toda la Configuración",
-    preferencesAutoSave: "Tus preferencias se guardarán automáticamente"
+    preferencesAutoSave: "Tus preferencias se guardarán automáticamente",
   },
-  
+
   french: {
     // Header
     appName: "Soins aux Personnes Âgées",
     appTagline: "Rappel Médical et Compagnon de Soutien",
-    
+
     // Navigation
     backToHome: "Retour à l'Accueil",
-    
+
     // Homepage
     emergencySOS: "SOS URGENCE",
     emergencyHelp: "Appuyez pour une assistance d'urgence immédiate",
@@ -163,17 +166,20 @@ export const translations = {
     viewAllMedications: "Voir Tous les Médicaments",
     manageAppointments: "Gérer les Rendez-vous",
     caregiverDashboard: "Tableau de Bord du Soignant",
-    caregiverDescription: "Voir les mises à jour de santé et gérer les paramètres de soins",
+    caregiverDescription:
+      "Voir les mises à jour de santé et gérer les paramètres de soins",
     accessDashboard: "Accéder au Tableau de Bord",
     reminderSettings: "Paramètres de Rappel",
-    reminderDescription: "Personnaliser les alertes de médicaments et rendez-vous",
+    reminderDescription:
+      "Personnaliser les alertes de médicaments et rendez-vous",
     manageReminders: "Gérer les Rappels",
     appSettings: "Paramètres de l'App",
-    appSettingsDescription: "Ajuster la taille du texte, la langue et les préférences",
+    appSettingsDescription:
+      "Ajuster la taille du texte, la langue et les préférences",
     openSettings: "Ouvrir les Paramètres",
     healthPriority: "Votre santé et sécurité sont notre priorité",
     available24_7: "Disponible 24h/24 et 7j/7 pour l'assistance d'urgence",
-    
+
     // Settings
     settings: "Paramètres",
     customizeExperience: "Personnalisez votre expérience d'application",
@@ -190,9 +196,11 @@ export const translations = {
     preferredLanguage: "Langue Préférée",
     notificationSettings: "Paramètres de Notification",
     medicationReminders: "Rappels de Médicaments",
-    medicationRemindersDesc: "Recevoir des notifications quand il est temps de prendre des médicaments",
+    medicationRemindersDesc:
+      "Recevoir des notifications quand il est temps de prendre des médicaments",
     appointmentReminders: "Rappels de Rendez-vous",
-    appointmentRemindersDesc: "Recevoir des notifications sur les rendez-vous à venir",
+    appointmentRemindersDesc:
+      "Recevoir des notifications sur les rendez-vous à venir",
     emergencyAlerts: "Alertes d'Urgence",
     emergencyAlertsDesc: "Notifications d'urgence importantes",
     soundAlerts: "Alertes Sonores",
@@ -200,16 +208,20 @@ export const translations = {
     vibration: "Vibration",
     vibrationDesc: "Vibrer pour les alertes importantes",
     emergencyContacts: "Contacts d'Urgence",
-    emergencyContactsDesc: "Gérer qui reçoit les notifications en cas d'urgence",
+    emergencyContactsDesc:
+      "Gérer qui reçoit les notifications en cas d'urgence",
     manageEmergencyContacts: "Gérer les Contacts d'Urgence",
     saveAllSettings: "Enregistrer Tous les Paramètres",
-    preferencesAutoSave: "Vos préférences seront enregistrées automatiquement"
-  }
+    preferencesAutoSave: "Vos préférences seront enregistrées automatiquement",
+  },
 };
 
 export type Language = keyof typeof translations;
 export type TranslationKey = keyof typeof translations.english;
 
-export const getTranslation = (language: Language, key: TranslationKey): string => {
+export const getTranslation = (
+  language: Language,
+  key: TranslationKey,
+): string => {
   return translations[language]?.[key] || translations.english[key] || key;
 };
