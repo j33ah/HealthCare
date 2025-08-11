@@ -13,6 +13,18 @@ export default {
       },
     },
     extend: {
+      fontSize: {
+        'xs': ['0.875rem', { lineHeight: '1.5' }],
+        'sm': ['1rem', { lineHeight: '1.6' }],
+        'base': ['1.125rem', { lineHeight: '1.7' }],
+        'lg': ['1.25rem', { lineHeight: '1.8' }],
+        'xl': ['1.375rem', { lineHeight: '1.8' }],
+        '2xl': ['1.5rem', { lineHeight: '1.8' }],
+        '3xl': ['1.875rem', { lineHeight: '1.8' }],
+        '4xl': ['2.25rem', { lineHeight: '1.8' }],
+        '5xl': ['3rem', { lineHeight: '1.8' }],
+        '6xl': ['3.75rem', { lineHeight: '1.8' }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +68,16 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        healthcare: {
+          primary: "hsl(var(--healthcare-primary))",
+          "primary-foreground": "hsl(var(--healthcare-primary-foreground))",
+          secondary: "hsl(var(--healthcare-secondary))",
+          "secondary-foreground": "hsl(var(--healthcare-secondary-foreground))",
+          emergency: "hsl(var(--healthcare-emergency))",
+          "emergency-foreground": "hsl(var(--healthcare-emergency-foreground))",
+          success: "hsl(var(--healthcare-success))",
+          "success-foreground": "hsl(var(--healthcare-success-foreground))",
         },
       },
       borderRadius: {
