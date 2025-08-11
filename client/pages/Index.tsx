@@ -81,13 +81,20 @@ export default function Index() {
     <div className="min-h-screen bg-background p-4 md:p-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-            HealthCare Companion
-          </h1>
-          <p className="text-xl text-muted-foreground mt-2">
-            Your trusted medical reminder and support system
-          </p>
+        <div className="flex items-center gap-6">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F2261629aea6847c390c7fc0b90a71cad%2F37cf5ed6dfc94c2e88f91a6ddf09d886?format=webp&width=800"
+            alt="Senior Citizen Medical Care Logo"
+            className="w-24 h-24 md:w-32 md:h-32 rounded-2xl shadow-lg"
+          />
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+              Senior Citizen Care
+            </h1>
+            <p className="text-xl text-muted-foreground mt-2">
+              Medical Reminder & Support Companion
+            </p>
+          </div>
         </div>
         <div className="flex items-center gap-4">
           <div className="text-right">
