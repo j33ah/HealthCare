@@ -135,15 +135,15 @@ export default function Index() {
             className="emergency-button bg-healthcare-emergency hover:bg-healthcare-emergency/90 text-healthcare-emergency-foreground w-full"
           >
             <AlertCircle className="h-8 w-8 mr-4" />
-            EMERGENCY SOS
+            {t('emergencySOS')}
             <Phone className="h-8 w-8 ml-4" />
           </Button>
           <p className="text-lg mt-4 text-muted-foreground">
-            Press for immediate emergency assistance
+            {t('emergencyHelp')}
             {location && (
               <span className="flex items-center justify-center mt-2">
                 <MapPin className="h-5 w-5 mr-2" />
-                Location services active
+                {t('locationActive')}
               </span>
             )}
           </p>
