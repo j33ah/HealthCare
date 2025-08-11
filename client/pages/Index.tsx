@@ -93,10 +93,10 @@ export default function Index() {
           />
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-              Senior Citizen Care
+              {t('appName')}
             </h1>
             <p className="text-xl text-muted-foreground mt-2">
-              Medical Reminder & Support Companion
+              {t('appTagline')}
             </p>
           </div>
         </div>
