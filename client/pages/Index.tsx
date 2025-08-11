@@ -16,13 +16,15 @@ import {
   Bell,
   Settings,
   Moon,
-  Sun
+  Sun,
 } from "lucide-react";
 
 export default function Index() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [location, setLocation] = useState<{lat: number, lng: number} | null>(null);
+  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(
+    null,
+  );
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
@@ -36,27 +38,27 @@ export default function Index() {
         (position) => {
           setLocation({
             lat: position.coords.latitude,
-            lng: position.coords.longitude
+            lng: position.coords.longitude,
           });
         },
         (error) => {
           console.log("Location access denied");
-        }
+        },
       );
     }
   }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle("dark");
   };
 
   const handleEmergencyCall = () => {
     // In a real app, this would trigger emergency services and notify caregivers
-    const message = location 
+    const message = location
       ? `Emergency! Location: ${location.lat.toFixed(6)}, ${location.lng.toFixed(6)}`
       : "Emergency! Location not available";
-    
+
     alert(message);
     // Here you would:
     // 1. Call emergency services
@@ -69,12 +71,12 @@ export default function Index() {
   const upcomingMedications = [
     { name: "Blood Pressure Medication", time: "2:00 PM", taken: false },
     { name: "Vitamin D", time: "6:00 PM", taken: false },
-    { name: "Heart Medication", time: "8:00 PM", taken: false }
+    { name: "Heart Medication", time: "8:00 PM", taken: false },
   ];
 
   const todaysAppointments = [
     { doctor: "Dr. Smith", time: "10:30 AM", type: "Cardiology" },
-    { doctor: "Dr. Johnson", time: "3:00 PM", type: "General Check-up" }
+    { doctor: "Dr. Johnson", time: "3:00 PM", type: "General Check-up" },
   ];
 
   return (
@@ -99,19 +101,26 @@ export default function Index() {
         <div className="flex items-center gap-4">
           <div className="text-right">
             <div className="text-2xl font-bold">
-              {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+              {currentTime.toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
             </div>
             <div className="text-lg text-muted-foreground">
               {currentTime.toLocaleDateString()}
             </div>
           </div>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             onClick={toggleDarkMode}
             className="senior-button"
           >
-            {isDarkMode ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
+            {isDarkMode ? (
+              <Sun className="h-6 w-6" />
+            ) : (
+              <Moon className="h-6 w-6" />
+            )}
           </Button>
         </div>
       </div>
@@ -119,7 +128,7 @@ export default function Index() {
       {/* Emergency SOS Button */}
       <Card className="mb-8 border-4 border-healthcare-emergency">
         <CardContent className="p-6 text-center">
-          <Button 
+          <Button
             onClick={handleEmergencyCall}
             className="emergency-button bg-healthcare-emergency hover:bg-healthcare-emergency/90 text-healthcare-emergency-foreground w-full"
           >
@@ -147,7 +156,7 @@ export default function Index() {
               <Pill className="h-8 w-8 text-healthcare-primary mr-4" />
               <h2 className="text-3xl font-bold">Today's Medications</h2>
             </div>
-            
+
             <div className="space-y-4">
               {upcomingMedications.map((med, index) => (
                 <Alert key={index} className="border-2">
@@ -156,9 +165,11 @@ export default function Index() {
                     <div className="flex justify-between items-center">
                       <div>
                         <div className="text-xl font-semibold">{med.name}</div>
-                        <div className="text-lg text-muted-foreground">Due at {med.time}</div>
+                        <div className="text-lg text-muted-foreground">
+                          Due at {med.time}
+                        </div>
                       </div>
-                      <Button 
+                      <Button
                         className="senior-button bg-healthcare-success hover:bg-healthcare-success/90"
                         disabled={med.taken}
                       >
@@ -186,14 +197,16 @@ export default function Index() {
               <Calendar className="h-8 w-8 text-healthcare-secondary mr-4" />
               <h2 className="text-3xl font-bold">Today's Appointments</h2>
             </div>
-            
+
             <div className="space-y-4">
               {todaysAppointments.map((apt, index) => (
                 <Alert key={index} className="border-2">
                   <Heart className="h-6 w-6" />
                   <AlertDescription className="ml-4">
                     <div className="text-xl font-semibold">{apt.doctor}</div>
-                    <div className="text-lg text-muted-foreground">{apt.type}</div>
+                    <div className="text-lg text-muted-foreground">
+                      {apt.type}
+                    </div>
                     <div className="text-lg font-medium">{apt.time}</div>
                   </AlertDescription>
                 </Alert>

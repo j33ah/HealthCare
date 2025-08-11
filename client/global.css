@@ -125,7 +125,10 @@
   }
 
   /* Senior-friendly accessibility improvements */
-  button, input, select, textarea {
+  button,
+  input,
+  select,
+  textarea {
     @apply min-h-[3rem] text-lg;
   }
 

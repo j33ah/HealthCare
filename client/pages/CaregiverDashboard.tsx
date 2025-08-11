@@ -3,17 +3,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { 
-  Users, 
-  Heart, 
-  AlertTriangle, 
-  Clock, 
+import {
+  Users,
+  Heart,
+  AlertTriangle,
+  Clock,
   Phone,
   ArrowLeft,
   CheckCircle,
   XCircle,
   MessageSquare,
-  Activity
+  Activity,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -29,8 +29,8 @@ export default function CaregiverDashboard() {
       upcomingAppointments: 2,
       recentActivity: "Took morning medications",
       healthStatus: "Good",
-      emergencyContacts: ["Dr. Smith", "Daughter: Sarah"]
-    }
+      emergencyContacts: ["Dr. Smith", "Daughter: Sarah"],
+    },
   ]);
 
   const [recentAlerts] = useState([
@@ -39,22 +39,22 @@ export default function CaregiverDashboard() {
       type: "medication",
       message: "Margaret took her morning blood pressure medication",
       time: "8:15 AM",
-      severity: "info"
+      severity: "info",
     },
     {
       id: 2,
       type: "appointment",
       message: "Reminder: Cardiology appointment tomorrow at 10:30 AM",
       time: "Yesterday",
-      severity: "warning"
+      severity: "warning",
     },
     {
       id: 3,
       type: "emergency",
       message: "Emergency button test completed successfully",
       time: "2 days ago",
-      severity: "success"
-    }
+      severity: "success",
+    },
   ]);
 
   const sendMessage = (patientId: number) => {
@@ -95,8 +95,10 @@ export default function CaregiverDashboard() {
                   <Users className="h-8 w-8 mr-4 text-healthcare-primary" />
                   {patient.name}, {patient.age}
                 </span>
-                <Badge 
-                  variant={patient.healthStatus === "Good" ? "default" : "destructive"}
+                <Badge
+                  variant={
+                    patient.healthStatus === "Good" ? "default" : "destructive"
+                  }
                   className="text-lg px-4 py-2"
                 >
                   {patient.healthStatus}
@@ -116,7 +118,7 @@ export default function CaregiverDashboard() {
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <Card>
                   <CardContent className="p-4 text-center">
                     <div className="text-3xl font-bold text-healthcare-primary">
@@ -127,7 +129,7 @@ export default function CaregiverDashboard() {
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <Card>
                   <CardContent className="p-4 text-center">
                     <div className="text-3xl font-bold text-healthcare-secondary">
@@ -138,7 +140,7 @@ export default function CaregiverDashboard() {
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <Card>
                   <CardContent className="p-4 text-center">
                     <div className="text-lg font-bold text-green-600">
@@ -162,14 +164,14 @@ export default function CaregiverDashboard() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 mb-6">
-                <Button 
+                <Button
                   onClick={() => callPatient(patient.id)}
                   className="senior-button bg-healthcare-primary hover:bg-healthcare-primary/90 flex-1"
                 >
                   <Phone className="h-6 w-6 mr-3" />
                   Call Patient
                 </Button>
-                <Button 
+                <Button
                   onClick={() => sendMessage(patient.id)}
                   className="senior-button bg-healthcare-secondary hover:bg-healthcare-secondary/90 flex-1"
                 >
@@ -209,18 +211,20 @@ export default function CaregiverDashboard() {
         <CardContent>
           <div className="space-y-4">
             {recentAlerts.map((alert) => (
-              <Alert 
-                key={alert.id} 
+              <Alert
+                key={alert.id}
                 className={`border-2 ${
-                  alert.severity === 'success' ? 'border-healthcare-success' :
-                  alert.severity === 'warning' ? 'border-yellow-500' :
-                  'border-healthcare-primary'
+                  alert.severity === "success"
+                    ? "border-healthcare-success"
+                    : alert.severity === "warning"
+                      ? "border-yellow-500"
+                      : "border-healthcare-primary"
                 }`}
               >
                 <div className="flex items-center">
-                  {alert.severity === 'success' ? (
+                  {alert.severity === "success" ? (
                     <CheckCircle className="h-6 w-6 text-healthcare-success" />
-                  ) : alert.severity === 'warning' ? (
+                  ) : alert.severity === "warning" ? (
                     <AlertTriangle className="h-6 w-6 text-yellow-600" />
                   ) : (
                     <Clock className="h-6 w-6 text-healthcare-primary" />
@@ -229,8 +233,12 @@ export default function CaregiverDashboard() {
                 <AlertDescription className="ml-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <div className="text-lg font-semibold">{alert.message}</div>
-                      <div className="text-base text-muted-foreground">{alert.time}</div>
+                      <div className="text-lg font-semibold">
+                        {alert.message}
+                      </div>
+                      <div className="text-base text-muted-foreground">
+                        {alert.time}
+                      </div>
                     </div>
                   </div>
                 </AlertDescription>

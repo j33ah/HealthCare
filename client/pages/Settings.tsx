@@ -2,20 +2,26 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { 
-  Settings as SettingsIcon, 
-  ArrowLeft, 
-  Volume2, 
-  Bell, 
-  Type, 
-  Globe, 
+import {
+  Settings as SettingsIcon,
+  ArrowLeft,
+  Volume2,
+  Bell,
+  Type,
+  Globe,
   Moon,
   Sun,
   Smartphone,
-  Mail
+  Mail,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -27,14 +33,14 @@ export default function Settings() {
     medications: true,
     appointments: true,
     emergencies: true,
-    reminders: true
+    reminders: true,
   });
   const [reminderSound, setReminderSound] = useState(true);
   const [vibration, setVibration] = useState(true);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle("dark");
   };
 
   const updateFontSize = (value: number[]) => {
@@ -92,7 +98,10 @@ export default function Settings() {
                   <span>Extra Large</span>
                 </div>
               </div>
-              <p className="text-lg mt-2" style={{ fontSize: `${fontSize[0]}px` }}>
+              <p
+                className="text-lg mt-2"
+                style={{ fontSize: `${fontSize[0]}px` }}
+              >
                 Sample text at selected size
               </p>
             </div>
@@ -101,12 +110,14 @@ export default function Settings() {
             <div className="flex items-center justify-between">
               <div>
                 <Label className="text-xl font-semibold">Dark Mode</Label>
-                <p className="text-lg text-muted-foreground">Easier on the eyes in low light</p>
+                <p className="text-lg text-muted-foreground">
+                  Easier on the eyes in low light
+                </p>
               </div>
               <div className="flex items-center gap-4">
                 <Sun className="h-6 w-6" />
-                <Switch 
-                  checked={isDarkMode} 
+                <Switch
+                  checked={isDarkMode}
                   onCheckedChange={toggleDarkMode}
                   className="scale-150"
                 />
@@ -126,17 +137,29 @@ export default function Settings() {
           </CardHeader>
           <CardContent>
             <div>
-              <Label className="text-xl font-semibold">Preferred Language</Label>
+              <Label className="text-xl font-semibold">
+                Preferred Language
+              </Label>
               <Select value={language} onValueChange={setLanguage}>
                 <SelectTrigger className="text-lg h-14 mt-3">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="english" className="text-lg">English</SelectItem>
-                  <SelectItem value="spanish" className="text-lg">Español</SelectItem>
-                  <SelectItem value="french" className="text-lg">Français</SelectItem>
-                  <SelectItem value="chinese" className="text-lg">中文</SelectItem>
-                  <SelectItem value="arabic" className="text-lg">العربية</SelectItem>
+                  <SelectItem value="english" className="text-lg">
+                    English
+                  </SelectItem>
+                  <SelectItem value="spanish" className="text-lg">
+                    Español
+                  </SelectItem>
+                  <SelectItem value="french" className="text-lg">
+                    Français
+                  </SelectItem>
+                  <SelectItem value="chinese" className="text-lg">
+                    中文
+                  </SelectItem>
+                  <SelectItem value="arabic" className="text-lg">
+                    العربية
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -156,36 +179,57 @@ export default function Settings() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <Label className="text-xl font-semibold">Medication Reminders</Label>
-                  <p className="text-lg text-muted-foreground">Get notified when it's time for medications</p>
+                  <Label className="text-xl font-semibold">
+                    Medication Reminders
+                  </Label>
+                  <p className="text-lg text-muted-foreground">
+                    Get notified when it's time for medications
+                  </p>
                 </div>
-                <Switch 
-                  checked={notifications.medications} 
-                  onCheckedChange={(checked) => setNotifications({...notifications, medications: checked})}
+                <Switch
+                  checked={notifications.medications}
+                  onCheckedChange={(checked) =>
+                    setNotifications({ ...notifications, medications: checked })
+                  }
                   className="scale-150"
                 />
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <Label className="text-xl font-semibold">Appointment Reminders</Label>
-                  <p className="text-lg text-muted-foreground">Get notified about upcoming appointments</p>
+                  <Label className="text-xl font-semibold">
+                    Appointment Reminders
+                  </Label>
+                  <p className="text-lg text-muted-foreground">
+                    Get notified about upcoming appointments
+                  </p>
                 </div>
-                <Switch 
-                  checked={notifications.appointments} 
-                  onCheckedChange={(checked) => setNotifications({...notifications, appointments: checked})}
+                <Switch
+                  checked={notifications.appointments}
+                  onCheckedChange={(checked) =>
+                    setNotifications({
+                      ...notifications,
+                      appointments: checked,
+                    })
+                  }
                   className="scale-150"
                 />
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <Label className="text-xl font-semibold">Emergency Alerts</Label>
-                  <p className="text-lg text-muted-foreground">Important emergency notifications</p>
+                  <Label className="text-xl font-semibold">
+                    Emergency Alerts
+                  </Label>
+                  <p className="text-lg text-muted-foreground">
+                    Important emergency notifications
+                  </p>
                 </div>
-                <Switch 
-                  checked={notifications.emergencies} 
-                  onCheckedChange={(checked) => setNotifications({...notifications, emergencies: checked})}
+                <Switch
+                  checked={notifications.emergencies}
+                  onCheckedChange={(checked) =>
+                    setNotifications({ ...notifications, emergencies: checked })
+                  }
                   className="scale-150"
                 />
               </div>
@@ -196,12 +240,14 @@ export default function Settings() {
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-xl font-semibold">Sound Alerts</Label>
-                  <p className="text-lg text-muted-foreground">Play sound for notifications</p>
+                  <p className="text-lg text-muted-foreground">
+                    Play sound for notifications
+                  </p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Volume2 className="h-6 w-6" />
-                  <Switch 
-                    checked={reminderSound} 
+                  <Switch
+                    checked={reminderSound}
                     onCheckedChange={setReminderSound}
                     className="scale-150"
                   />
@@ -211,12 +257,14 @@ export default function Settings() {
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-xl font-semibold">Vibration</Label>
-                  <p className="text-lg text-muted-foreground">Vibrate for important alerts</p>
+                  <p className="text-lg text-muted-foreground">
+                    Vibrate for important alerts
+                  </p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Smartphone className="h-6 w-6" />
-                  <Switch 
-                    checked={vibration} 
+                  <Switch
+                    checked={vibration}
                     onCheckedChange={setVibration}
                     className="scale-150"
                   />

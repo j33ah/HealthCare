@@ -5,50 +5,50 @@ import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { 
-  Pill, 
-  Plus, 
-  Clock, 
+import {
+  Pill,
+  Plus,
+  Clock,
   Calendar,
   ArrowLeft,
   CheckCircle,
   XCircle,
-  AlertTriangle
+  AlertTriangle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Medications() {
   const [medications] = useState([
-    { 
+    {
       id: 1,
-      name: "Lisinopril", 
-      dosage: "10mg", 
+      name: "Lisinopril",
+      dosage: "10mg",
       frequency: "Once daily",
       time: "8:00 AM",
       taken: true,
       nextDue: "Tomorrow 8:00 AM",
-      instructions: "Take with water, before breakfast"
+      instructions: "Take with water, before breakfast",
     },
-    { 
+    {
       id: 2,
-      name: "Metformin", 
-      dosage: "500mg", 
+      name: "Metformin",
+      dosage: "500mg",
       frequency: "Twice daily",
       time: "8:00 AM, 8:00 PM",
       taken: false,
       nextDue: "Today 8:00 PM",
-      instructions: "Take with meals"
+      instructions: "Take with meals",
     },
-    { 
+    {
       id: 3,
-      name: "Vitamin D3", 
-      dosage: "1000 IU", 
+      name: "Vitamin D3",
+      dosage: "1000 IU",
       frequency: "Once daily",
       time: "12:00 PM",
       taken: false,
       nextDue: "Today 12:00 PM",
-      instructions: "Take with food"
-    }
+      instructions: "Take with food",
+    },
   ]);
 
   const markAsTaken = (id: number) => {
@@ -87,7 +87,10 @@ export default function Medications() {
         <CardContent>
           <div className="grid gap-6">
             {medications.map((med) => (
-              <Alert key={med.id} className={`border-2 ${med.taken ? 'border-healthcare-success' : 'border-healthcare-primary'}`}>
+              <Alert
+                key={med.id}
+                className={`border-2 ${med.taken ? "border-healthcare-success" : "border-healthcare-primary"}`}
+              >
                 <div className="flex items-center">
                   {med.taken ? (
                     <CheckCircle className="h-8 w-8 text-healthcare-success" />
@@ -99,10 +102,17 @@ export default function Medications() {
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <div className="text-2xl font-bold">{med.name}</div>
-                      <div className="text-xl text-muted-foreground">{med.dosage} - {med.frequency}</div>
-                      <div className="text-lg font-medium mt-2">{med.instructions}</div>
+                      <div className="text-xl text-muted-foreground">
+                        {med.dosage} - {med.frequency}
+                      </div>
+                      <div className="text-lg font-medium mt-2">
+                        {med.instructions}
+                      </div>
                       <div className="flex items-center gap-4 mt-3">
-                        <Badge variant={med.taken ? "default" : "destructive"} className="text-lg px-3 py-1">
+                        <Badge
+                          variant={med.taken ? "default" : "destructive"}
+                          className="text-lg px-3 py-1"
+                        >
                           {med.taken ? "✓ Taken" : `Due: ${med.time}`}
                         </Badge>
                         <span className="text-lg text-muted-foreground">
@@ -111,7 +121,7 @@ export default function Medications() {
                       </div>
                     </div>
                     {!med.taken && (
-                      <Button 
+                      <Button
                         onClick={() => markAsTaken(med.id)}
                         className="senior-button bg-healthcare-success hover:bg-healthcare-success/90 ml-4"
                       >
@@ -173,15 +183,23 @@ export default function Medications() {
             <Alert className="border-yellow-200 bg-yellow-50">
               <AlertTriangle className="h-6 w-6 text-yellow-600" />
               <AlertDescription className="ml-4">
-                <div className="text-lg font-semibold">Never skip your heart medication</div>
-                <div className="text-base">Always take Lisinopril at the same time each day</div>
+                <div className="text-lg font-semibold">
+                  Never skip your heart medication
+                </div>
+                <div className="text-base">
+                  Always take Lisinopril at the same time each day
+                </div>
               </AlertDescription>
             </Alert>
             <Alert className="border-blue-200 bg-blue-50">
               <AlertTriangle className="h-6 w-6 text-blue-600" />
               <AlertDescription className="ml-4">
-                <div className="text-lg font-semibold">Take Metformin with food</div>
-                <div className="text-base">This helps prevent stomach upset</div>
+                <div className="text-lg font-semibold">
+                  Take Metformin with food
+                </div>
+                <div className="text-base">
+                  This helps prevent stomach upset
+                </div>
               </AlertDescription>
             </Alert>
           </div>
