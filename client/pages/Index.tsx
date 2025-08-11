@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 export default function Index() {
+  const { t } = useTranslation();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [location, setLocation] = useState<{ lat: number; lng: number } | null>(
