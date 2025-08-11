@@ -163,10 +163,12 @@ export default function Index() {
               ))}
             </div>
 
-            <Button className="senior-button bg-healthcare-primary hover:bg-healthcare-primary/90 w-full mt-6">
-              <Pill className="h-6 w-6 mr-3" />
-              View All Medications
-            </Button>
+            <Link to="/medications">
+              <Button className="senior-button bg-healthcare-primary hover:bg-healthcare-primary/90 w-full mt-6">
+                <Pill className="h-6 w-6 mr-3" />
+                View All Medications
+              </Button>
+            </Link>
           </CardContent>
         </Card>
 
