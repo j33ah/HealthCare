@@ -29,6 +29,14 @@ export default function Settings() {
   const [fontSize, setFontSize] = useState([18]);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [language, setLanguage] = useState("english");
+
+  const languageNames = {
+    english: "English",
+    spanish: "Español",
+    french: "Français",
+    chinese: "中文",
+    arabic: "العربية"
+  };
   const [notifications, setNotifications] = useState({
     medications: true,
     appointments: true,
